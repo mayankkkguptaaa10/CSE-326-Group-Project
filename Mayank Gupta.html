@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Market | Shop Local, Shop Smart</title>
+  <meta name="description" content="Shop groceries, fashion, electronics and daily essentials from your local market.">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="advanced.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    🛍️ Support your local shops — great products, closer to home!
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">Local<span>Market.</span></a>
+
+      <form class="search" id="searchForm">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search groceries, fruits, clothes..."
+          aria-label="Search products"
+        >
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="nav-actions">
+        <a href="login.html">👤 Login</a>
+        <a href="cart.html" class="cart-link">
+          🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="category-nav">
+      <div class="container">
+        <a href="#categories">All Categories</a>
+        <a href="#products" data-category="Grocery">Groceries</a>
+        <a href="#products" data-category="Fruits">Fruits & Vegetables</a>
+        <a href="#products" data-category="Dairy">Dairy</a>
+        <a href="#products" data-category="Fashion">Fashion</a>
+        <a href="#products" data-category="Electronics">Electronics</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR NEIGHBOURHOOD MARKET</span>
+        <h1>Everything you need, right around the corner.</h1>
+        <p>
+          Discover everyday essentials and great products from local
+          shops. Shop conveniently while supporting your community.
+        </p>
+        <a href="#products" class="btn btn-primary">Explore Products →</a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">🛍️</div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories">
+      <div class="section-heading">
+        <div>
+          <h2>Shop by Category</h2>
+          <p>Find what you need in just a few clicks.</p>
+        </div>
+      </div>
+
+      <div class="categories">
+        <a href="#products" class="category-card" data-category="Grocery">
+          <div class="category-icon">🛒</div>
+          <h3>Groceries</h3>
+        </a>
+
+        <a href="#products" class="category-card" data-category="Fruits">
+          <div class="category-icon">🍎</div>
+          <h3>Fruits & Veg</h3>
+        </a>
+
+        <a href="#products" class="category-card" data-category="Dairy">
+          <div class="category-icon">🥛</div>
+          <h3>Dairy</h3>
+        </a>
+
+        <a href="#products" class="category-card" data-category="Fashion">
+          <div class="category-icon">👕</div>
+          <h3>Fashion</h3>
+        </a>
+
+        <a href="#products" class="category-card" data-category="Electronics">
+          <div class="category-icon">🎧</div>
+          <h3>Electronics</h3>
+        </a>
+
+        <a href="#products" class="category-card" data-category="Home">
+          <div class="category-icon">🏠</div>
+          <h3>Home Needs</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section id="products">
+      <div class="section-heading">
+        <div>
+          <h2>Popular Products</h2>
+          <p>Everyday favourites from your local market.</p>
+        </div>
+        <a href="products.html" class="view-all">View All →</a>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card" data-name="Fresh Apples" data-category="Fruits">
+          <div class="product-image">
+            <span class="tag">Popular</span> 🍎
+          </div>
+          <div class="product-info">
+            <p class="shop-name">Green Basket Store</p>
+            <h3>Fresh Apples (1 kg)</h3>
+            <p class="rating">★★★★★ <span>4.8</span></p>
+            <div class="product-bottom">
+              <span class="price">₹149</span>
+              <button class="add-btn" data-id="1" data-name="Fresh Apples" data-price="149">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Organic Milk" data-category="Dairy">
+          <div class="product-image">
+            <span class="tag">Fresh</span> 🥛
+          </div>
+          <div class="product-info">
+            <p class="shop-name">Daily Dairy Shop</p>
+            <h3>Fresh Milk (1 litre)</h3>
+            <p class="rating">★★★★★ <span>4.7</span></p>
+            <div class="product-bottom">
+              <span class="price">₹65</span>
+              <button class="add-btn" data-id="2" data-name="Fresh Milk" data-price="65">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Whole Wheat Bread" data-category="Grocery">
+          <div class="product-image">
+            <span class="tag">Bestseller</span> 🍞
+          </div>
+          <div class="product-info">
+            <p class="shop-name">City Bakery</p>
+            <h3>Wheat Bread</h3>
+            <p class="rating">★★★★★ <span>4.6</span></p>
+            <div class="product-bottom">
+              <span class="price">₹45</span>
+              <button class="add-btn" data-id="3" data-name="Wheat Bread" data-price="45">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Cotton T-Shirt" data-category="Fashion">
+          <div class="product-image">
+            <span class="tag">Trending</span> 👕
+          </div>
+          <div class="product-info">
+            <p class="shop-name">Style Corner</p>
+            <h3>Cotton T-Shirt</h3>
+            <p class="rating">★★★★★ <span>4.5</span></p>
+            <div class="product-bottom">
+              <span class="price">₹299</span>
+              <button class="add-btn" data-id="4" data-name="Cotton T-Shirt" data-price="299">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Bananas" data-category="Fruits">
+          <div class="product-image">🍌</div>
+          <div class="product-info">
+            <p class="shop-name">Fresh Farm Shop</p>
+            <h3>Bananas (1 dozen)</h3>
+            <p class="rating">★★★★★ <span>4.6</span></p>
+            <div class="product-bottom">
+              <span class="price">₹60</span>
+              <button class="add-btn" data-id="5" data-name="Bananas" data-price="60">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Wireless Earphones" data-category="Electronics">
+          <div class="product-image">🎧</div>
+          <div class="product-info">
+            <p class="shop-name">Tech Local</p>
+            <h3>Wireless Earphones</h3>
+            <p class="rating">★★★★★ <span>4.4</span></p>
+            <div class="product-bottom">
+              <span class="price">₹799</span>
+              <button class="add-btn" data-id="6" data-name="Wireless Earphones" data-price="799">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Rice 5 kg" data-category="Grocery">
+          <div class="product-image">🍚</div>
+          <div class="product-info">
+            <p class="shop-name">Family Grocery Store</p>
+            <h3>Rice (5 kg)</h3>
+            <p class="rating">★★★★★ <span>4.7</span></p>
+            <div class="product-bottom">
+              <span class="price">₹350</span>
+              <button class="add-btn" data-id="7" data-name="Rice (5 kg)" data-price="350">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Indoor Plant" data-category="Home">
+          <div class="product-image">🪴</div>
+          <div class="product-info">
+            <p class="shop-name">Green Home Shop</p>
+            <h3>Indoor Plant</h3>
+            <p class="rating">★★★★★ <span>4.5</span></p>
+            <div class="product-bottom">
+              <span class="price">₹199</span>
+              <button class="add-btn" data-id="8" data-name="Indoor Plant" data-price="199">+ Add</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p id="noResults" class="empty-message" hidden>No products found. Try another search.</p>
+    </section>
+
+    <!-- Benefits -->
+    <div class="benefits">
+      <div class="benefit">
+        <span class="benefit-icon">🏪</span>
+        <div>
+          <h3>Support Local Shops</h3>
+          <p>Help neighbourhood businesses grow.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">🚚</span>
+        <div>
+          <h3>Convenient Shopping</h3>
+          <p>Browse everyday products in one place.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">💚</span>
+        <div>
+          <h3>Community First</h3>
+          <p>Keep local shopping connected.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="logo" style="color:white">Local<span>Market.</span></h3>
+          <p>Your neighbourhood marketplace for everyday needs.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="my-orders.html">My Orders</a>
+        </div>
+
+        <div>
+          <h3>Customer Account</h3>
+          <a href="login.html">Login</a>
+          <a href="register.html">Create Account</a>
+          <a href="cart.html">Shopping Cart</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> LocalMarket. Student project demo.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
